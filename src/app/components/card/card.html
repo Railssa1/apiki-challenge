@@ -1,0 +1,5 @@
+<div class="container-card">
+  <img [src]="post()._embedded['wp:featuredmedia'][0].source_url" alt="" />
+  <h2>{{ post().title.rendered }}</h2>
+  <a [href]="post().link" target="_blank">{{ post().slug }}</a>
+</div>

@@ -1,0 +1,7 @@
+<app-header></app-header>
+
+<main class="container">
+  @for(post of posts; track post.title) {
+    <app-card class="post-card" [post]="post"></app-card>
+  }
+</main>
