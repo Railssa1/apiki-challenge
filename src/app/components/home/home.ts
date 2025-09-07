@@ -4,15 +4,18 @@ import { Card } from "../card/card";
 import { BlogDataService } from '../../services/blog-data.service';
 import { ResponseLast10Posts } from '../../models/last-10-posts';
 import { ButtonLoad } from "../button-load/button-load";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, Card, ButtonLoad],
+  imports: [Card, ButtonLoad],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export class Home implements OnInit {
   private blogService = inject(BlogDataService);
+  private router = inject(Router);
+
   pages = 0;
   currentPage = 2;
   showButton = true;
@@ -47,5 +50,9 @@ export class Home implements OnInit {
       },
       error: (err) => console.log(err)
     });
+  }
+
+  onDetailPost(event: string): void {
+    this.router.navigate(["/detail-post", event])
   }
 }

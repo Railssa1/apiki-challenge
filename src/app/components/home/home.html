@@ -1,9 +1,7 @@
-<app-header></app-header>
-
 <main>
   <div class="container">
     @for(post of posts; track post.title) {
-      <app-card class="post-card" [post]="post"></app-card>
+      <app-card class="post-card" [post]="post" (slug)="onDetailPost($event)"></app-card>
     }
   </div>
   <div class="container-button">

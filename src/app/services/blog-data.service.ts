@@ -23,4 +23,9 @@ export class BlogDataService {
       }))
     );
   }
+
+  getDetailPost(slug: string): Observable<any> {
+    const url = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug="
+    return this.http.get<any>(`${url}${slug}`);
+  }
 }

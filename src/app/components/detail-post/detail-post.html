@@ -1,0 +1,5 @@
+<div class="container">
+  <img [src]="data[0]._embedded['wp:featuredmedia'][0].source_url" [alt]="data[0]._embedded['wp:featuredmedia'][0].slug" />
+  <h1>{{ data[0].title.rendered }}</h1>
+  <div [innerHTML]="data[0].content.rendered"></div>
+</div>

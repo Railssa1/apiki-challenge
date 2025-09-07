@@ -1,4 +1,4 @@
-<div class="container-card">
+<div class="container-card" (click)="slug.emit(post().slug)">
   <img [src]="post()._embedded['wp:featuredmedia'][0].source_url" alt="" />
   <h2>{{ post().title.rendered }}</h2>
   <a [href]="post().link" target="_blank">{{ post().slug }}</a>

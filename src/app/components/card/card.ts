@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { ResponsePostObject } from '../../models/last-10-posts';
 
 @Component({
@@ -8,5 +8,6 @@ import { ResponsePostObject } from '../../models/last-10-posts';
   styleUrl: './card.css'
 })
 export class Card {
+  slug = output<string>();
   post = input.required<ResponsePostObject>();
 }
