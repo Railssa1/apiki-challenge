@@ -1,0 +1,13 @@
+.btn {
+  font-size: 2rem;
+  padding: 35px;
+  color: var(--color-text-secondary);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5%;
+  background: var(--color-bg-main );
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
